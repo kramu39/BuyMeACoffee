@@ -7,10 +7,13 @@ cache_dir = "./.cache"
 
 
 
-[contracts.tip]
-path = "contracts/tip.clar"
+[contracts.buy-me-coffee-token]
+path = "contracts/buy-me-coffee-token.clar"
+epoch="latest"
 
 
+[requirements]
+sip-010-trait = "SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard"
 
 # Check-checker settings:
 # trusted_sender: if true, inputs are trusted after tx_sender has been checked.
