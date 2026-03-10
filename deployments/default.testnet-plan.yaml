@@ -8,10 +8,10 @@ plan:
   - id: 0
     transactions:
     - transaction-type: contract-publish
-      contract-name: buy-me-coffee
+      contract-name: buy-me-coffee-token-v1
       expected-sender: ST29VJHHXFPRQMW6W1VDE9NVR4AZ04V44H15082SQ
-      cost: 17850
-      path: contracts/buy-me-coffee.clar
+      cost: 24930
+      path: contracts/buy-me-coffee-token.clar
       anchor-block-only: true
       clarity-version: 4
     epoch: '3.3'
