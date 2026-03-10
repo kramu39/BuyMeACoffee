@@ -1,0 +1,25 @@
+**/settings/Mainnet.toml
+**/settings/Testnet.toml
+.cache/**
+history.txt
+clarinet/
+
+logs
+*.log
+npm-debug.log*
+coverage
+*.info
+costs-reports.json
+node_modules
+
+# dapp local artifacts
+dapp/.git/
+dapp/node_modules/
+dapp/dist/
+dapp/dist-ssr/
+dapp/coverage/
+dapp/.env
+dapp/.env.*
+dapp/*.local
+
+*.sh
