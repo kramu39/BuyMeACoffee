@@ -8,10 +8,10 @@ plan:
   - id: 0
     transactions:
     - transaction-type: contract-publish
-      contract-name: tip
+      contract-name: buy-me-coffee-token
       expected-sender: SP29VJHHXFPRQMW6W1VDE9NVR4AZ04V44H3T1X01Y
-      cost: 9870
-      path: contracts/tip.clar
+      cost: 24930
+      path: contracts/buy-me-coffee-token.clar
       anchor-block-only: true
-      clarity-version: 1
-    epoch: '2.05'
+      clarity-version: 4
+    epoch: '3.3'
