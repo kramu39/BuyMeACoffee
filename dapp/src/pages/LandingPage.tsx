@@ -8,14 +8,14 @@ const features = [
   {
     icon: Link2,
     title: "One-Click Tip Links",
-    desc: "Create a personalised link in seconds. Pre-fill any STX amount and share it anywhere — Twitter, email, or a QR code on a stream.",
+    desc: "Create a personalised link in seconds. Pre-fill any STX amount and share it anywhere Twitter, email, or a QR code on a stream.",
     accent: "text-primary",
     glow: "group-hover:shadow-glow-orange",
   },
   {
     icon: Zap,
     title: "Lightning-Fast On-Chain",
-    desc: "Tips land directly in the recipient's wallet on Stacks mainnet. No middlemen, no delays — just a confirmed transaction in seconds.",
+    desc: "Tips land directly in the recipient's wallet on Stacks mainnet. No middlemen, no delays  just a confirmed transaction in seconds.",
     accent: "text-yellow-500",
     glow: "group-hover:shadow-[0_0_16px_rgba(234,179,8,0.35)]",
   },
@@ -122,7 +122,7 @@ export default function LandingPage() {
               <span className="text-primary">get tipped</span>
             </h2>
             <p className="mt-4 text-muted-foreground text-lg max-w-xl mx-auto">
-              From a single shareable link to a full transaction history — BuyMeCoffee handles the whole journey on Stacks.
+              From a single shareable link to a full transaction history BuyMeCoffee handles the whole journey on Stacks.
             </p>
           </motion.div>
 

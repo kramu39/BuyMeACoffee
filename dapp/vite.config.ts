@@ -10,6 +10,7 @@ export default defineConfig(() => ({
     hmr: {
       overlay: false,
     },
+    allowedHosts: ["folly-surly-temeka.ngrok-free.dev"],
   },
   plugins: [react()],
   resolve: {

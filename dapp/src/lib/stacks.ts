@@ -1,11 +1,5 @@
 import { request } from "@stacks/connect";
-import {
-  uintCV,
-  principalCV,
-  PostConditionMode,
-  Pc,
-  Cl,
-} from "@stacks/transactions";
+import { uintCV, principalCV } from "@stacks/transactions";
 
 export const CONTRACT_ADDRESS = "SP29VJHHXFPRQMW6W1VDE9NVR4AZ04V44H3T1X01Y";
 export const CONTRACT_NAME = "tip";
@@ -46,8 +40,15 @@ export async function sendTip(
 ) {
   const amountUstx = stxToMicroStx(amountStx);
 
+  // Explicit object format required by the request() API.
+  // Asserts sender sends EXACTLY amountUstx uSTX — no more, no less.
   const postConditions = [
-    Pc.principal(senderAddress).willSendEq(amountUstx).ustx(),
+    {
+      type: "stx-postcondition" as const,
+      address: senderAddress,
+      condition: "eq" as const,
+      amount: String(amountUstx),
+    },
   ];
 
   try {
@@ -55,7 +56,7 @@ export async function sendTip(
       contract: `${CONTRACT_ADDRESS}.${CONTRACT_NAME}`,
       functionName: "tip",
       functionArgs: [principalCV(recipientAddress), uintCV(amountUstx)],
-      postConditionMode: PostConditionMode.Deny,
+      postConditionMode: "deny",   // string required by request() — NOT PostConditionMode enum
       postConditions,
       network: NETWORK,
     });
