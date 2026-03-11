@@ -1,10 +1,38 @@
 # BuyMeACoffee
 
-BuyMeACoffee is a Stacks-based tipping project with:
+BuyMeACoffee is an on-chain tipping platform for the Stacks ecosystem that helps creators, builders, and open-source contributors receive support instantly in STX. It combines a clean wallet-first web app with secure Clarity smart contracts so supporters can send tips in seconds, while both sides get transparent, verifiable transactions on-chain.
 
-- Clarity smart contracts for token/tipping logic
-- A React + Vite dapp for wallet connect and sending tips
-- Clarinet configuration for local checks and deployment plans
+Built for real-world usage, the project includes a production-ready React + Vite dapp, contract tooling through Clarinet, and deployment/test workflows that make it easy to develop locally and ship confidently.
+
+It is designed to make internet-native support simple: if someone creates value, anyone can send appreciation instantly with STX. Instead of relying on closed donation platforms, tips are executed on-chain with transparent transaction history and wallet-level confirmation.
+
+## Why This Project Matters
+
+BuyMeACoffee solves a practical gap for builders and creators in the Stacks ecosystem:
+
+- Fast support: people can tip in seconds without learning complex DeFi flows
+- Transparent by default: transfers are verifiable on-chain
+- Wallet-first trust: users approve transactions from their own wallets
+- Shareable growth loop: creators can distribute tip links across social channels
+
+For creators, this means a lightweight funding stream.
+For supporters, this means simple, direct, and auditable payments.
+
+## What You Can Do With It
+
+- Connect a Stacks wallet from the dapp
+- Generate and share tip links
+- Send STX tips with post-condition protection
+- View transaction outcomes and inspect them in the explorer
+- Run and iterate smart contracts locally before deployment
+
+## How It Works (High Level)
+
+1. A supporter opens the dapp and connects a wallet.
+2. The app prepares a contract call with strict post-conditions.
+3. The wallet displays what will be transferred before signing.
+4. On confirmation, the transaction is broadcast to Stacks.
+5. Results can be verified publicly in the explorer.
 
 ## Project Status
 
