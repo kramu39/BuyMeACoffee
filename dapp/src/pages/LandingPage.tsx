@@ -1,29 +1,37 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Zap, Link2, BarChart3, Shield } from "lucide-react";
+import { ArrowRight, Zap, Link2, BarChart3, Shield, Wallet, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useWallet } from "@/context/WalletContext";
 
 const features = [
   {
     icon: Link2,
-    title: "Easy Tip Links",
-    desc: "Generate shareable links with pre-filled amounts. Share via QR, tweet, or email.",
+    title: "One-Click Tip Links",
+    desc: "Create a personalised link in seconds. Pre-fill any STX amount and share it anywhere — Twitter, email, or a QR code on a stream.",
+    accent: "text-primary",
+    glow: "group-hover:shadow-glow-orange",
   },
   {
     icon: Zap,
-    title: "Instant Tipping",
-    desc: "Send STX tips directly on-chain in seconds with Hiro or Leather wallet.",
+    title: "Lightning-Fast On-Chain",
+    desc: "Tips land directly in the recipient's wallet on Stacks mainnet. No middlemen, no delays — just a confirmed transaction in seconds.",
+    accent: "text-yellow-500",
+    glow: "group-hover:shadow-[0_0_16px_rgba(234,179,8,0.35)]",
   },
   {
     icon: BarChart3,
-    title: "Transaction Dashboard",
-    desc: "Track all sent and received tips with real-time charts and filters.",
+    title: "Live Dashboard",
+    desc: "Every tip you send or receive shows up instantly. Filter by date, chart your support over time, and export with one click.",
+    accent: "text-accent",
+    glow: "group-hover:shadow-glow-green",
   },
   {
     icon: Shield,
-    title: "Secure & Trustless",
-    desc: "Smart contract enforced. Post-conditions protect every transaction.",
+    title: "Non-Custodial & Safe",
+    desc: "Post-conditions are baked into every call so the contract can never move more STX than you approved. Your keys, your coins.",
+    accent: "text-blue-400",
+    glow: "group-hover:shadow-[0_0_16px_rgba(96,165,250,0.35)]",
   },
 ];
 
@@ -110,10 +118,11 @@ export default function LandingPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-              Why <span className="text-primary">BuyMeCoffee</span>?
+              Everything a builder needs to{" "}
+              <span className="text-primary">get tipped</span>
             </h2>
-            <p className="mt-4 text-muted-foreground text-lg max-w-lg mx-auto">
-              The simplest way to support builders on the Stacks ecosystem.
+            <p className="mt-4 text-muted-foreground text-lg max-w-xl mx-auto">
+              From a single shareable link to a full transaction history — BuyMeCoffee handles the whole journey on Stacks.
             </p>
           </motion.div>
 
@@ -128,13 +137,15 @@ export default function LandingPage() {
               <motion.div
                 key={f.title}
                 variants={item}
-                className="card-gradient rounded-2xl border border-border p-6 hover:shadow-soft transition-shadow group"
+                className="card-gradient rounded-2xl border border-border p-6 hover:shadow-soft transition-all duration-300 group flex flex-col gap-4"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:shadow-glow-orange transition-shadow">
-                  <f.icon className="h-6 w-6 text-primary" />
+                <div className={`w-12 h-12 rounded-xl bg-muted flex items-center justify-center transition-shadow duration-300 ${f.glow}`}>
+                  <f.icon className={`h-6 w-6 ${f.accent}`} />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{f.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
+                <div>
+                  <h3 className="text-base font-bold text-foreground mb-1.5">{f.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
