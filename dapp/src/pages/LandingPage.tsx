@@ -64,7 +64,7 @@ export default function LandingPage() {
           >
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 text-sm font-medium mb-6">
               <Zap className="h-3.5 w-3.5" />
-              Built on Stacks Mainnet
+              Live on Stacks
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground leading-tight">
