@@ -23,3 +23,5 @@ dapp/.env.*
 dapp/*.local
 
 *.sh
+
+*.ps1
